@@ -1,0 +1,143 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+
+    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-2">
+        <button class="btn  btn-primary btn-lg button-class" onclick="window.location.href='@Url.Action("SetupAlgorthems", "ADM") ';">
+            Start Using Our Algorithems
+        </button>
+    </div>
+
+</div>
+<div class="row ">
+    <div class="id3-area">
+        <div class="col-xs-12 col-sm-6">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src="~/Content/images/blue-and-silver-stetoscope-40568 (5).jpg">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="~/Content/images/computer-desk-laptop-stethoscope-48604.jpg">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="~/Content/images/person-getting-his-blood-check-1350560.jpg">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 text-container">
+            <div class="id3-text text-center text-justify ">
+                Decision tree is the most powerful and popular tool for classification and prediction. A Decision tree is a flowchart like tree structure, where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label.<br />
+                Decision trees classify instances by sorting them down the tree from the root to some leaf node, which provides the classification of the instance. An instance is classified by starting at the root node of the tree,testing the attribute specified by this node,then moving down the tree branch corresponding to the value of the attribute as shown in the above figure.This process is then repeated for the subtree rooted at the new node.<br />
+                Strengths and Weakness of Decision Tree approach<br />
+                The strengths of decision tree methods are:<br />
+                <ul>
+                    <li>Decision trees are able to generate understandable rules.</li>
+                    <li>Decision trees perform classification without requiring much computation.</li>
+                    <li>Decision trees are able to handle both continuous and categorical variables.</li>
+                    <li>Decision trees provide a clear indication of which fields are most important for prediction or classification.</li>
+                </ul>
+                <h4>refrecnces:</h4>
+                <div class="refrence">Machine Learning, Tom Mitchell, McGraw Hill, 1997.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row ">
+    <div class="id3-area">
+        <div class="col-xs-12 col-sm-6 text-container">
+            <div class="id3-text">
+                The fundamental Naive Bayes assumption is that each feature makes an:
+                <ul>
+                    <li>independent</li>
+                    <li>equal</li>
+                </ul>
+                contribution to the outcome.
+
+                With relation to our dataset, this concept can be understood as:
+                <ul>
+                    <li> We assume that no pair of features are dependent. For example, the temperature being ‘Hot’ has nothing to do with the humidity or the outlook being ‘Rainy’ has no effect on the winds. Hence, the features are assumed to be independent.</li>
+                    <li> Secondly, each feature is given the same weight(or importance). For example, knowing only temperature and humidity alone can’t predict the outcome accuratey. None of the attributes is irrelevant and assumed to be contributing equally to the outcome.</li>
+                </ul>
+                <strong>Note:</strong>  The assumptions made by Naive Bayes are not generally correct in real-world situations. In-fact, the independence assumption is never correct but often works well in practice.
+                Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Bayes’ theorem is stated mathematically as the following equation:
+
+                Now, before moving to the formula for Naive Bayes, it is important to know about Bayes’ theorem.
+                <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7777aa719ea14857115695676adc0914_l3.svg"/>
+                where A and B are events and P(B) ?
+
+               
+                
+                <ul>
+                    <li>Basically, we are trying to find probability of event A, given the event B is true. Event B is also termed as evidence.</li>
+                    <li> P(A) is the priori of A (the prior probability, i.e. Probability of event before evidence is seen). The evidence is an attribute value of an unknown instance(here, it is event B).</li>
+                    <li>Decision trees are able to handle both continuous and categorical variables.</li>
+                    <li>P(A|B) is a posteriori probability of B, i.e. probability of event after evidence is seen.</li>
+                </ul>
+                <h4>refrecnces:</h4>
+                <ul>
+                    <li>https://en.wikipedia.org/wiki/Naive_Bayes_classifier</li>
+                    <li>http://gerardnico.com/wiki/data_mining/naive_bayes</li>
+                    <li>http://scikit-learn.org/stable/modules/naive_bayes.html</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div id="myCarousel2" class="carousel slide" data-ride="carousel2">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel2" data-slide-to="1"></li>
+                    <li data-target="#myCarousel2" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src="~/Content/images/working-pattern-internet-abstract-1089438.jpg">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="~/Content/images/technology-computer-display-text-330771.jpg">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="~/Content/images/laptop-office-internet-technology-177598.jpg">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

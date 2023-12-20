@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A620E5_heartDatasetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="'heart dataset$'">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="age" Type="int" Nullable="false" />
+          <Property Name="chest_pain_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="rest_blood_pressure" Type="int" Nullable="false" />
+          <Property Name="blood_sugar" Type="bit" Nullable="false" />
+          <Property Name="rest_electro" Type="nvarchar" MaxLength="255" />
+          <Property Name="max_heart_rate" Type="int" Nullable="false" />
+          <Property Name="exercice_angina" Type="nvarchar" MaxLength="255" />
+          <Property Name="disease" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_A620E5_heartDatasetModelStoreContainer">
+          <EntitySet Name="'heart dataset$'" EntityType="Self.'heart dataset$'" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A620E5_heartDatasetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_heart_dataset__">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="age" Type="Int32" Nullable="false" />
+          <Property Name="chest_pain_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="rest_blood_pressure" Type="Int32" Nullable="false" />
+          <Property Name="blood_sugar" Type="Boolean" Nullable="false" />
+          <Property Name="rest_electro" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="max_heart_rate" Type="Int32" Nullable="false" />
+          <Property Name="exercice_angina" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="disease" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="DB_A620E5_heartDatasetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_heart_dataset__" EntityType="Self.C_heart_dataset__" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A620E5_heartDatasetModelStoreContainer" CdmEntityContainer="DB_A620E5_heartDatasetEntities">
+          <EntitySetMapping Name="C_heart_dataset__">
+            <EntityTypeMapping TypeName="DB_A620E5_heartDatasetModel.C_heart_dataset__">
+              <MappingFragment StoreEntitySet="'heart dataset$'">
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="chest_pain_type" ColumnName="chest_pain_type" />
+                <ScalarProperty Name="rest_blood_pressure" ColumnName="rest_blood_pressure" />
+                <ScalarProperty Name="blood_sugar" ColumnName="blood_sugar" />
+                <ScalarProperty Name="rest_electro" ColumnName="rest_electro" />
+                <ScalarProperty Name="max_heart_rate" ColumnName="max_heart_rate" />
+                <ScalarProperty Name="exercice_angina" ColumnName="exercice_angina" />
+                <ScalarProperty Name="disease" ColumnName="disease" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

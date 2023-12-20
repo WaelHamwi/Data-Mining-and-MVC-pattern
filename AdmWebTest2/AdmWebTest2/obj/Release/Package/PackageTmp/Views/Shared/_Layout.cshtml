@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .circle {
+          width: 500px;
+          height: 500px;
+          border-radius: 50%;
+          font-size: 50px;
+          color: #fff;
+          font-size:30px;
+          line-height: 500px;
+          text-align: center;
+          background: rgba(222, 172, 16, 0.5);
+        }
+       
+        .image-body {
+            background-image: url(/Content/images/chart-close-up-data-desk-590022.jpg) ;
+            background-size:cover;
+        }
+
+        .id3-form {
+            background-color: rgba(255, 2, 64, 0.3);
+            padding:10px;
+        }
+
+        .bayes-form {
+            background-color: rgba(126, 235, 255,0.3);
+            padding: 10px;
+        }
+
+        .button-class {
+            margin: 20px 0px;
+            padding: 10px 20px;
+        }
+        .text-container{
+            height:30vw;
+
+        }
+
+
+     
+        .labelsform{
+            margin:5px;
+            padding:5px;
+            text-align:center;
+        }
+        .id3-text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height:80%;
+            font-size: medium;
+            overflow: auto;
+            padding: 5px;
+            color: black;
+            background-color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+<body class="image-body">
+    
+    
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

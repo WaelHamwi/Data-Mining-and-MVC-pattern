@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="heartDatasetStoreContainer" CdmEntityContainer="Heart_Class">
+    <EntitySetMapping Name="C_heart_dataset__">
+      <EntityTypeMapping TypeName="heartDataset.C_heart_dataset__">
+        <MappingFragment StoreEntitySet="'heart dataset$'">
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="chest_pain_type" ColumnName="chest_pain_type" />
+          <ScalarProperty Name="rest_blood_pressure" ColumnName="rest_blood_pressure" />
+          <ScalarProperty Name="blood_sugar" ColumnName="blood_sugar" />
+          <ScalarProperty Name="rest_electro" ColumnName="rest_electro" />
+          <ScalarProperty Name="max_heart_rate" ColumnName="max_heart_rate" />
+          <ScalarProperty Name="exercice_angina" ColumnName="exercice_angina" />
+          <ScalarProperty Name="disease" ColumnName="disease" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

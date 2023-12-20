@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="heartDataset" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_heart_dataset__">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="chest_pain_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="rest_blood_pressure" Type="Int32" Nullable="false" />
+    <Property Name="blood_sugar" Type="Boolean" Nullable="false" />
+    <Property Name="rest_electro" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="max_heart_rate" Type="Int32" Nullable="false" />
+    <Property Name="exercice_angina" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="disease" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="Heart_Class" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_heart_dataset__" EntityType="Self.C_heart_dataset__" />
+  </EntityContainer>
+</Schema>

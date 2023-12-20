@@ -1,0 +1,49 @@
+﻿@model AdmWebTest2.ViewModels.result
+@{
+    ViewBag.Title = "res";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    @if (Model.bayesOutput != null && Model.id3Output != null)
+    {
+        <div class="col-sm-offset-3 col-sm-3 ">
+            <div class="circle">
+                    @Model.id3Output 
+            </div>
+        </div>
+        <div class="col-sm-offset-3 col-sm-3 ">
+            <div class="circle">
+                    @Model.bayesOutput.Item1 :
+                    @Model.bayesOutput.Item2
+
+            </div>
+        </div>
+    }
+    @if (Model.bayesOutput != null && Model.id3Output == null)
+    {
+        <div class="col-sm-offset-3 col-sm-8 ">
+            <div class="circle">
+                @Model.bayesOutput.Item1 :
+                @Model.bayesOutput.Item2
+            </div>
+        </div>
+    }
+    @if (Model.bayesOutput == null && Model.id3Output != null)
+    {
+        <div class="col-sm-offset-3 col-sm-8 ">
+            <div class="circle">
+                    @Model.id3Output
+            </div>
+        </div>
+    }
+    @if (Model.bayesOutput == null && Model.id3Output == null)
+    {
+        <div class="col-sm-offset-3 col-sm-8 ">
+            <div class="circle">
+                   No result to show
+            </div>
+        </div>
+    }
+</div>

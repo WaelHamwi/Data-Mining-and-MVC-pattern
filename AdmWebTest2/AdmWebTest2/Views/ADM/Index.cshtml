@@ -1,0 +1,141 @@
+﻿@model AdmWebTest2.Models.C_heart_dataset__
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="content-area">
+        <div class="col-xs-12 col-sm-6">
+            @using (Html.BeginForm("testID3Algorthem", "ADM", FormMethod.Post, new { @class = "form-horizontal id3-form" }))
+            {
+
+                <fieldset>
+                    <legend>Use ID3 Classifire </legend>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.age, new { @class = "col-sm-3 labelsform  control-label" })
+                        @Html.TextBoxFor(m => m.age, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.age)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.chest_pain_type, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.chest_pain_type, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "asympt", Value="\"asympt\""},
+                            new SelectListItem() {Text = "atyp_angina", Value="\"atyp_angina\""},
+                            new SelectListItem() {Text = "non_anginal", Value="\"non_anginal\""},
+                            new SelectListItem() {Text = "typ_angina", Value="\"typ_angina\""}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.chest_pain_type)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.rest_blood_pressure, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.TextBoxFor(m => m.rest_blood_pressure, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.rest_blood_pressure)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.blood_sugar, new { @class = "col-sm-3 labelsform control-label " })
+                        @Html.Label("Yes") @Html.RadioButtonFor(m => m.blood_sugar, "True", new { @class = "labelsform" })
+                        @Html.Label("NO") @Html.RadioButtonFor(m => m.blood_sugar, "False", new { @class = "labelsform" })
+                        @Html.ValidationMessageFor(m => m.blood_sugar)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.rest_electro, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.rest_electro, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "left_vent_hyper", Value="\"left_vent_hyper\""},
+                            new SelectListItem() {Text = "normal", Value="\"normal\""},
+                            new SelectListItem() {Text = "st_t_wave_abnormality", Value="\"st_t_wave_abnormality\""}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.rest_electro)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.max_heart_rate, new { @class = "col-sm-3  labelsform control-label" })
+                        @Html.TextBoxFor(m => m.max_heart_rate, new { @class = "col-sm-3 form-control" })
+                        @Html.ValidationMessageFor(m => m.max_heart_rate)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.exercice_angina, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.exercice_angina, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "yes", Value="\"yes\""},
+                            new SelectListItem() {Text = "no", Value="\"no\""}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.exercice_angina)
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            }
+          </div>
+        <div class="col-xs-12 col-sm-6">
+            @using (Html.BeginForm("testBayesAlgorthem", "ADM", FormMethod.Post, new { @class = "form-horizontal bayes-form" }))
+            {
+                <fieldset >
+                    <legend>Use ID3 Classifire </legend>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.age,new { @class= "col-sm-3 labelsform  control-label" })
+                        @Html.TextBoxFor(m => m.age, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.age)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.chest_pain_type, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.chest_pain_type, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "asympt", Value="asympt"},
+                            new SelectListItem() {Text = "atyp_angina", Value="atyp_angina"},
+                            new SelectListItem() {Text = "non_anginal", Value="non_anginal"},
+                            new SelectListItem() {Text = "typ_angina", Value="typ_angina"}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.chest_pain_type)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.rest_blood_pressure, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.TextBoxFor(m => m.rest_blood_pressure, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.rest_blood_pressure)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.blood_sugar, new { @class = "col-sm-3 labelsform control-label " })
+                        @Html.Label("Yes") @Html.RadioButtonFor(m => m.blood_sugar, "True",new {@class="labelsform"}) 
+                        @Html.Label("NO") @Html.RadioButtonFor(m => m.blood_sugar, "False",new { @class = "labelsform" }) 
+                        @Html.ValidationMessageFor(m => m.blood_sugar)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.rest_electro, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.rest_electro, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "left_vent_hyper", Value="left_vent_hyper"},
+                            new SelectListItem() {Text = "normal", Value="normal"},
+                            new SelectListItem() {Text = "st_t_wave_abnormality", Value="st_t_wave_abnormality"}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.rest_electro)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.max_heart_rate, new { @class = "col-sm-3  labelsform control-label" })
+                        @Html.TextBoxFor(m => m.max_heart_rate, new { @class = "col-sm-3 form-control" })
+                        @Html.ValidationMessageFor(m => m.max_heart_rate)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.exercice_angina, new { @class = "col-sm-3 labelsform control-label" })
+                        @Html.DropDownListFor(m => m.exercice_angina, new List<SelectListItem>
+                        {
+                            new SelectListItem() {Text = "yes", Value="yes"},
+                            new SelectListItem() {Text = "no", Value="no"}
+                        }, new { @class = "col-sm-3  form-control" })
+                        @Html.ValidationMessageFor(m => m.exercice_angina)
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        </div>  
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+
